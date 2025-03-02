@@ -1,0 +1,18 @@
+services:
+
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    # public: true
+
+  Codesache\AddRelCanonicalBundle\:
+    resource: '../src/'
+    exclude: '../src/{ContaoManager,DependencyInjection,Model,Controller/FrontendModule/Legacy}'
+
+  # unset the original service definition
+  Oveleon\ContaoGlossaryBundle\Controller\FrontendModule\GlossaryReaderController: ~
+
+  # replace the old definition with the new one
+  # (the old definition is lost -- which does not matter in our use case)
+  Oveleon\ContaoGlossaryBundle\Controller\FrontendModule\GlossaryReaderController:
+    class: Codesache\AddRelCanonicalBundle\Controller\FrontendModule\GlossaryReaderController
