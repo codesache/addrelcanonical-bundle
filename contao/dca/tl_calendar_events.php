@@ -4,7 +4,7 @@ use Contao\System;
 use Contao\CoreBundle\DataContainer\PaletteManipulator;
 use Codesache\AddRelCanonicalBundle\Helper\DcaHelper;
 
-if (!in_array('ContaoCalendarBundle', array_keys(System::getContainer()->getParameter('kernel.bundles')), true)) {
+if (in_array('ContaoCalendarBundle', array_keys(System::getContainer()->getParameter('kernel.bundles')), true)) {
 
     PaletteManipulator::create()
         ->addLegend('rel_canonical_legend', 'publish_legend', PaletteManipulator::POSITION_BEFORE)
