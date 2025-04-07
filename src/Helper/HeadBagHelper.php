@@ -33,7 +33,7 @@ class HeadBagHelper
                     $headBag->setCanonicalUri('');
                     break;
                 case DcaHelper::RELCANONICAL_DONOTSET:
-                case '': // if nothing is set (BC)
+                case DcaHelper::RELCANONICAL_NO_VALUE_SET: // if nothing is set (BC)
                     // do not set anything (the rel="canonical" attribute will be set by contao then!
                     break;
                 default:

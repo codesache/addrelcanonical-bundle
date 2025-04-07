@@ -7,6 +7,7 @@ use Exception;
 
 class DcaHelper
 {
+    public const string RELCANONICAL_NO_VALUE_SET = '';
     public const string RELCANONICAL_DONOTSET = 'rc_donotset';
     public const string RELCANONICAL_INTERNAL = 'rc_internal';
     public const string RELCANONICAL_EXTERNAL = 'rc_external';
