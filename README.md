@@ -13,6 +13,13 @@ entries for pages that show  glossary-, FAQ-, calendar, or news items (i.e. page
 * News `"contao/news-bundle`
 * Calendar `"contao/calendar-bundle`.
 
+## Note
+
+Not selecting an option for “rel="canonical" setzen"” or selecting the option “Nicht setzen” does not mean there will 
+be no `<link rel="canonical" ...>` in the page. It just means, this bundle will not perform any action (and Contao will 
+probably set the header value).
+
+
 ## Roadmap
 
 Make this bundle work with Contao 5.x. 
