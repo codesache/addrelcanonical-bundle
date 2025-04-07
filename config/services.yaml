@@ -7,4 +7,4 @@ services:
 
   Codesache\AddRelCanonicalBundle\:
     resource: '../src/'
-    exclude: '../src/{ContaoManager,DependencyInjection,Model,Controller/FrontendModule/Legacy}'
+    exclude: '../src/{ContaoManager,DependencyInjection,Helper,Model,Controller/FrontendModule/Legacy}'
