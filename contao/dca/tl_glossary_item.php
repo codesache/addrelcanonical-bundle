@@ -18,9 +18,9 @@ if (in_array('ContaoGlossaryBundle', array_keys(System::getContainer()->getParam
     $GLOBALS['TL_DCA']['tl_glossary_item']['fields']['canonicalType'] = [
         'exclude' => true,
         'inputType' => 'select',
-        'options' => [DcaHelper::RELCANONICAL_NO_VALUE_SET, DcaHelper::RELCANONICAL_DONOTSET, DcaHelper::RELCANONICAL_INTERNAL, DcaHelper::RELCANONICAL_EXTERNAL, DcaHelper::RELCANONICAL_SELF],
+        'options' => [DcaHelper::RELCANONICAL_DONOTSET, DcaHelper::RELCANONICAL_INTERNAL, DcaHelper::RELCANONICAL_EXTERNAL, DcaHelper::RELCANONICAL_SELF],
         'reference' => &$GLOBALS['TL_LANG']['RelCanonical'],
-        'eval' => array('submitOnChange' => true),
+        'eval' => ['submitOnChange' => true, 'includeBlankOption' => true],
         'sql' => "varchar(32) NOT NULL default ''"
     ];
 

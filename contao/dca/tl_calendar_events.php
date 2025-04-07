@@ -22,9 +22,9 @@ if (in_array('ContaoCalendarBundle', array_keys(System::getContainer()->getParam
     $GLOBALS['TL_DCA']['tl_calendar_events']['fields']['canonicalType'] = [
         'exclude' => true,
         'inputType' => 'select',
-        'options' => [DcaHelper::RELCANONICAL_NO_VALUE_SET, DcaHelper::RELCANONICAL_DONOTSET, DcaHelper::RELCANONICAL_INTERNAL, DcaHelper::RELCANONICAL_EXTERNAL, DcaHelper::RELCANONICAL_SELF],
+        'options' => [DcaHelper::RELCANONICAL_DONOTSET, DcaHelper::RELCANONICAL_INTERNAL, DcaHelper::RELCANONICAL_EXTERNAL, DcaHelper::RELCANONICAL_SELF],
         'reference' => &$GLOBALS['TL_LANG']['RelCanonical'],
-        'eval' => ['submitOnChange' => true],
+        'eval' => ['submitOnChange' => true, 'includeBlankOption' => true],
         'sql' => "varchar(32) NOT NULL default ''",
     ];
 
