@@ -27,10 +27,12 @@ Make this bundle work with Contao 5.x.
 Required work: switch from the legacy content elements and frontend modules to controllers.
 
 As of now 
+ 
 * Glossary should be OK already
 * FAQ `"contao/faq-bundle` still has `contao/modules/ModuleFaqReader` 
 * News `"contao/news-bundle` still has `contao/modules/ModuleNewsReader`
-* Calendar `"contao/calendar-bundle` `contao/modules/ModuleEventReader`
+* Calendar `"contao/calendar-bundle` still has `contao/modules/ModuleEventReader`
+
 so the bundle should work with Contao 5.x already. (TODO test it!).
 
 
