@@ -30,8 +30,6 @@ class HeadBagHelper
                 case DcaHelper::RELCANONICAL_INTERNAL:
                     $contaoPageId = $data['canonicalJumpTo'];
                     $pageModel = PageModel::findById($contaoPageId);
-                    //dump($pageModel?->getFrontendUrl());
-                    //dd($pageModel?->getAbsoluteUrl());
                     $headBag->setCanonicalUri($pageModel?->getAbsoluteUrl() ?? 'page_'.$contaoPageId);
                     break;
                 case DcaHelper::RELCANONICAL_SELF:
